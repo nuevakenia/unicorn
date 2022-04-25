@@ -9,7 +9,7 @@ from requests import Session
 
 from auth import AuthHandler
 from schemas import AuthDetails, CreateUserRequest
-from sqlalchemy.orm import get_db
+from sqlalchemy.orm import Session
 from database import get_db
 from models import User
 
@@ -22,9 +22,9 @@ class Npc(BaseModel):
     nivel: int
     skills: List[str] = []
 
-@app.get("/")
+""" @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello World"} """
 
 @app.get("/npc/{npc_id}")
 async def login(npc_id: int):
