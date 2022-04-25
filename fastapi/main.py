@@ -127,3 +127,4 @@ def delete(id: int, db: Session = Depends(get_db)):
     db.query(User).filter(User.id == id).delete()
     db.commit()
     return {"success": True}
+    #
